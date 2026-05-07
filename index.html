@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriVision — Smart Farmer Support Platform</title>
+  <meta name="description"
+    content="AgriVision connects farmers and agricultural experts through AI-powered crop detection, real-time market prices, weather alerts, and more." />
+  <meta name="keywords"
+    content="AgriVision, farmer platform, market prices, crop disease detection, agriculture India" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand" id="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 40 40" width="36" height="36">
+            <defs>
+              <linearGradient id="leaf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#4ade80" />
+                <stop offset="100%" style="stop-color:#16a34a" />
+              </linearGradient>
+            </defs>
+            <circle cx="20" cy="20" r="18" fill="url(#leaf-grad)" opacity="0.15" />
+            <path d="M20 8c-6 4-10 12-8 20 2-4 6-7 10-8-2-4-2-8-2-12z" fill="url(#leaf-grad)" />
+            <path d="M20 8c6 4 10 12 8 20-2-4-6-7-10-8 2-4 2-8 2-12z" fill="url(#leaf-grad)" opacity="0.6" />
+          </svg>
+        </div>
+        <span class="brand-text">Agri<span class="brand-accent">Vision</span></span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#crop-scanner" class="nav-link">AI Scanner</a>
+        <a href="#market-prices" class="nav-link">Market Prices</a>
+        <a href="#weather" class="nav-link">Weather</a>
+        <a href="#schemes" class="nav-link">Schemes</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" title="Switch Language">
+          <span>हिं</span> / <span>EN</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Smart Farmer Support Platform</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Bridging Farms,</span>
+          <span class="title-line gradient-text">Markets</span>
+          <span class="title-line">with Technology</span>
+        </h1>
+        <p class="hero-desc">
+          AI-powered crop disease detection, live market prices, weather intelligence, government schemes, and soil
+          analysis — all in one place.
+        </p>
+        <div class="hero-actions">
+          <a href="#features" class="btn btn-primary btn-glow" id="explore-btn">
+            <i class="fas fa-compass"></i> Explore Platform
+          </a>
+          <a href="#crop-scanner" class="btn btn-glass" id="try-ai-btn">
+            <i class="fas fa-camera"></i> Try AI Scanner
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item" id="stat-features">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Core Features</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item" id="stat-crops">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">Crops Tracked</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item" id="stat-languages">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Languages</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-features-grid">
+        <a href="#crop-scanner" class="hero-feat-box" id="hfb-scan" style="--hfb-color: #10b981;">
+          <div class="hfb-icon"><i class="fas fa-camera"></i></div>
+          <div class="hfb-title">AI Crop Scanner</div>
+          <div class="hfb-expand">
+            <p>Upload a leaf photo &amp; get instant AI disease detection with treatment suggestions</p>
+            <span class="hfb-link">Try Now <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#market-prices" class="hero-feat-box" id="hfb-market" style="--hfb-color: #f59e0b;">
+          <div class="hfb-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="hfb-title">Market Prices</div>
+          <div class="hfb-expand">
+            <p>Real-time crop prices with best market recommendations for maximum profit</p>
+            <span class="hfb-link">View Prices <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#weather" class="hero-feat-box" id="hfb-weather" style="--hfb-color: #3b82f6;">
+          <div class="hfb-icon"><i class="fas fa-cloud-sun-rain"></i></div>
+          <div class="hfb-title">Weather Intelligence</div>
+          <div class="hfb-expand">
+            <p>Hyper-local 7-day forecast with smart irrigation &amp; pesticide spray timing</p>
+            <span class="hfb-link">Check Weather <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="#schemes" class="hero-feat-box" id="hfb-schemes" style="--hfb-color: #8b5cf6;">
+          <div class="hfb-icon"><i class="fas fa-landmark"></i></div>
+          <div class="hfb-title">Govt Schemes</div>
+          <div class="hfb-expand">
+            <p>PM-Kisan, subsidies &amp; eligibility checker — never miss a benefit again</p>
+            <span class="hfb-link">View Schemes <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Scrolling Marquee -->
+    <section class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item"><i class="fas fa-seedling"></i> AI Crop Detection</span>
+          <span class="marquee-item"><i class="fas fa-chart-bar"></i> Live Market Prices</span>
+          <span class="marquee-item"><i class="fas fa-cloud-sun"></i> Weather Intelligence</span>
+          <span class="marquee-item"><i class="fas fa-seedling"></i> Soil Analysis</span>
+          <span class="marquee-item"><i class="fas fa-balance-scale"></i> Fair Pricing</span>
+          <span class="marquee-item"><i class="fas fa-file-alt"></i> Govt Schemes</span>
+          <span class="marquee-item"><i class="fas fa-chart-line"></i> Price Forecasting</span>
+          <span class="marquee-item"><i class="fas fa-seedling"></i> AI Crop Detection</span>
+          <span class="marquee-item"><i class="fas fa-chart-bar"></i> Live Market Prices</span>
+          <span class="marquee-item"><i class="fas fa-cloud-sun"></i> Weather Intelligence</span>
+          <span class="marquee-item"><i class="fas fa-seedling"></i> Soil Analysis</span>
+          <span class="marquee-item"><i class="fas fa-balance-scale"></i> Fair Pricing</span>
+          <span class="marquee-item"><i class="fas fa-file-alt"></i> Govt Schemes</span>
+          <span class="marquee-item"><i class="fas fa-chart-line"></i> Price Forecasting</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features-section section" id="features">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-badge"><i class="fas fa-star"></i> Core Features</span>
+          <h2 class="section-title">4 Powerful Capabilities</h2>
+          <p class="section-desc">Advanced tools to help farmers make better decisions</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card" id="feat-1">
+            <div class="feat-icon" style="--feat-color: #10b981;"><i class="fas fa-camera"></i></div>
+            <div class="feat-number">01</div>
+            <h3>AI Crop Disease Detection</h3>
+            <p>Upload a crop image & get instant AI-powered disease identification with treatment suggestions</p>
+            <a href="#crop-scanner" class="feat-link">Try Scanner <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card" id="feat-2">
+            <div class="feat-icon" style="--feat-color: #f59e0b;"><i class="fas fa-chart-line"></i></div>
+            <div class="feat-number">02</div>
+            <h3>Market Price Tracker</h3>
+            <p>Real-time crop prices with best market suggestions</p>
+            <a href="#market-prices" class="feat-link">View Prices <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card" id="feat-3">
+            <div class="feat-icon" style="--feat-color: #3b82f6;"><i class="fas fa-cloud-sun-rain"></i></div>
+            <div class="feat-number">03</div>
+            <h3>Weather Prediction</h3>
+            <p>Rain alerts and smart irrigation suggestions</p>
+            <a href="#weather" class="feat-link">Check Weather <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card" id="feat-4">
+            <div class="feat-icon" style="--feat-color: #ef4444;"><i class="fas fa-landmark"></i></div>
+            <div class="feat-number">04</div>
+            <h3>Govt Schemes</h3>
+            <p>PM-Kisan, subsidies, and support program info</p>
+            <a href="#schemes" class="feat-link">View Schemes <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTERACTIVE DEMO SECTIONS ===== -->
+
+    <!-- 1. AI Crop Disease Scanner -->
+    <section class="demo-section section crop-section" id="crop-scanner">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-badge green"><i class="fas fa-camera"></i> Feature #1</span>
+          <h2 class="section-title">AI Crop Disease Detection</h2>
+          <p class="section-desc">Upload a photo of your crop leaf and get instant AI-powered diagnosis</p>
+        </div>
+        <div class="scanner-layout">
+          <div class="scanner-upload" id="scanner-upload">
+            <div class="upload-zone" id="upload-zone">
+              <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+              <h3>Upload Crop Image</h3>
+              <p>Drag & drop or click to select a leaf photo</p>
+              <input type="file" id="crop-file-input"
+                accept=".jpg,.jpeg,.png,.webp,.bmp,image/jpeg,image/png,image/webp,image/bmp" hidden />
+              <button class="btn btn-primary btn-sm" id="upload-btn"><i class="fas fa-image"></i> Choose Image</button>
+            </div>
+            <div class="upload-preview" id="upload-preview" style="display:none;">
+              <img id="preview-img" alt="Crop preview" />
+              <button class="btn-icon" id="clear-upload" title="Clear"><i class="fas fa-times"></i></button>
+            </div>
+
+            <button class="btn btn-primary btn-full" id="scan-btn" disabled>
+              <i class="fas fa-microscope"></i> Scan for Disease
+            </button>
+          </div>
+
+          <div class="scanner-result" id="scanner-result">
+            <div class="result-placeholder" id="result-placeholder">
+              <div class="placeholder-icon"><i class="fas fa-leaf"></i></div>
+              <h3>Awaiting Scan</h3>
+              <p>Upload or select a sample crop image and hit "Scan" to see AI results</p>
+            </div>
+            <div class="result-data" id="result-data" style="display:none;">
+              <div class="result-header">
+                <h3 id="disease-name"></h3>
+                <span class="confidence-badge" id="confidence-badge"></span>
+              </div>
+              <div class="result-meters">
+                <div class="meter">
+                  <span class="meter-label">Disease Probability</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill" id="disease-meter" style="width:0%"></div>
+                  </div>
+                  <span class="meter-value" id="disease-percent">0%</span>
+                </div>
+                <div class="meter">
+                  <span class="meter-label">Crop Health</span>
+                  <div class="meter-bar health">
+                    <div class="meter-fill" id="health-meter" style="width:0%"></div>
+                  </div>
+                  <span class="meter-value" id="health-percent">0%</span>
+                </div>
+              </div>
+              <div class="treatment-box" id="treatment-box">
+                <h4><i class="fas fa-prescription"></i> Recommended Treatment</h4>
+                <ul id="treatment-list"></ul>
+              </div>
+              <div class="expert-cta">
+                <i class="fas fa-user-md"></i>
+                <div>
+                  <strong>Need expert help?</strong>
+                  <p>Connect with an agriculture advisor for personalized guidance</p>
+                </div>
+                <button class="btn btn-glass btn-sm" id="connect-expert-btn">Connect</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Market Price Tracker -->
+    <section class="demo-section section market-section" id="market-prices">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-badge amber"><i class="fas fa-chart-line"></i> Feature #2</span>
+          <h2 class="section-title">Live Market Price Tracker</h2>
+          <p class="section-desc">Real-time crop prices with best market suggestions for maximum profit</p>
+        </div>
+        <div class="market-layout">
+          <div class="market-controls">
+            <div class="market-search-row" style="display:flex; gap:12px; flex-wrap:wrap;">
+              <div class="market-search" style="flex:1; min-width:200px;">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search crops (Wheat, Bajra, Guar...)" id="market-search-input" />
+              </div>
+              <div class="market-search" id="market-location-search"
+                style="flex:1; min-width:200px; position:relative;">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Search any market..." id="market-location-input" autocomplete="off" />
+                <div class="market-location-suggestions" id="market-location-suggestions"></div>
+              </div>
+            </div>
+            <div class="market-filters">
+              <button class="filter-btn active" data-filter="all" id="filter-all">All Crops</button>
+              <button class="filter-btn" data-filter="grain" id="filter-grain">🌾 Grains</button>
+              <button class="filter-btn" data-filter="vegetable" id="filter-veg">🥬 Vegetables</button>
+              <button class="filter-btn" data-filter="spice" id="filter-spice">🌶️ Spices</button>
+            </div>
+          </div>
+          <div class="market-table-wrapper">
+            <table class="market-table" id="market-table">
+              <thead>
+                <tr>
+                  <th>Crop</th>
+                  <th>Best Market</th>
+                  <th>Price (₹/qtl)</th>
+                  <th>Change</th>
+                  <th>Min</th>
+                  <th>Max</th>
+                  <th>Trend</th>
+                </tr>
+              </thead>
+              <tbody id="market-tbody"></tbody>
+            </table>
+          </div>
+          <div class="market-tip" id="market-tip">
+            <i class="fas fa-lightbulb"></i>
+            <span id="market-tip-text">Loading best selling tips...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Weather Section — Google-Style Live Weather -->
+    <section class="demo-section section weather-section" id="weather">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-badge blue"><i class="fas fa-cloud-sun"></i> Feature #3</span>
+          <h2 class="section-title">Live Weather Intelligence</h2>
+          <p class="section-desc">Google-style real-time weather with hyper-local farming recommendations</p>
+        </div>
+
+        <!-- Google Weather Search Bar -->
+        <div class="gw-search-wrap" id="gw-search-wrap">
+          <div class="gw-search-bar">
+            <i class="fas fa-search gw-search-icon"></i>
+            <input type="text" id="gw-city-input" placeholder="Search village, town, city..." autocomplete="off" />
+            <button class="gw-locate-btn" id="gw-locate-btn" title="Search weather">
+              <i class="fas fa-search" id="gw-locate-icon"></i>
+            </button>
+          </div>
+          <div class="gw-suggestions" id="gw-suggestions"></div>
+
+        </div>
+
+        <!-- Main Weather Widget - Exact Google Style -->
+        <div class="google-weather-widget" id="gw-widget" style="display:none;">
+          <!-- Loading State -->
+          <div class="gw-loading" id="gw-loading" style="display:none;">
+            <div class="gw-loading-spinner"></div>
+            <p>Fetching weather data...</p>
+          </div>
+
+          <div id="gw-content">
+            <div class="gw-top-row">
+              <div class="gw-top-left">
+                <div class="gw-main-icon" id="gw-main-icon">☀️</div>
+                <div class="gw-main-temp">
+                  <span id="gw-temp-num">24</span>
+                  <div class="gw-temp-units">
+                    <span class="active">°C</span> | <span>°F</span>
+                  </div>
+                </div>
+                <div class="gw-main-details">
+                  <div>Precipitation: <span id="gw-precip-val">2%</span></div>
+                  <div>Humidity: <span id="gw-humidity-val">43%</span></div>
+                  <div>Wind: <span id="gw-wind-val">10 km/h</span></div>
+                </div>
+              </div>
+              <div class="gw-top-right">
+                <div class="gw-weather-title">Weather</div>
+                <div class="gw-time-text" id="gw-time-text">Monday, 1:00 am</div>
+                <div class="gw-condition-text" id="gw-condition-text">Partly cloudy</div>
+              </div>
+            </div>
+
+            <div class="gw-tabs" id="gw-tabs">
+              <div class="gw-tab active" onclick="updateGWTab('Temperature', this)">Temperature</div>
+              <div class="gw-tab" onclick="updateGWTab('Precipitation', this)">Precipitation</div>
+              <div class="gw-tab" onclick="updateGWTab('Wind', this)">Wind</div>
+            </div>
+
+            <div class="gw-chart-container">
+              <div class="gw-chart-temps" id="gw-chart-temps">
+                <!-- Spans with temperatures will be injected here -->
+              </div>
+              <svg class="gw-chart-svg" preserveAspectRatio="none" viewBox="0 0 800 100">
+                <path id="gw-chart-fill" d="" fill="rgba(253, 216, 53, 0.3)"></path>
+                <path id="gw-chart-line" d="" fill="none" stroke="#FBC02D" stroke-width="2"></path>
+              </svg>
+              <div class="gw-chart-times" id="gw-chart-times">
+                <!-- times (2 am, 5 am, etc.) injected here -->
+              </div>
+            </div>
+
+            <div class="gw-forecast-row" id="gw-forecast-row">
+              <!-- 7 day forecast injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketplace section removed - Farmers can view govt rates only -->
+
+
+    <!-- 6. Government Schemes -->
+    <section class="demo-section section schemes-section" id="schemes">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-badge red"><i class="fas fa-landmark"></i> Feature #4</span>
+          <h2 class="section-title">Government Schemes & Subsidies</h2>
+          <p class="section-desc">Stay informed about PM-Kisan, subsidies, and support programs</p>
+        </div>
+        <div class="schemes-grid" id="schemes-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 40 40" width="30" height="30">
+              <defs>
+                <linearGradient id="leaf-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#4ade80" />
+                  <stop offset="100%" style="stop-color:#16a34a" />
+                </linearGradient>
+              </defs>
+              <circle cx="20" cy="20" r="18" fill="url(#leaf-grad2)" opacity="0.15" />
+              <path d="M20 8c-6 4-10 12-8 20 2-4 6-7 10-8-2-4-2-8-2-12z" fill="url(#leaf-grad2)" />
+            </svg>
+          </div>
+          <span class="brand-text">Agri<span class="brand-accent">Vision</span></span>
+        </div>
+        <p>Connecting rural India through technology</p>
+      </div>
+      <div class="footer-links">
+        <div class="fl-group">
+          <h4>Features</h4>
+          <a href="#features">All Features</a>
+          <a href="#crop-scanner">AI Scanner</a>
+          <a href="#market-prices">Market Prices</a>
+          <a href="#weather">Weather</a>
+        </div>
+        <div class="fl-group">
+          <h4>Resources</h4>
+          <a href="#schemes">Govt Schemes</a>
+          <a href="#market-prices">Price Tracker</a>
+        </div>
+        <div class="fl-group">
+          <h4>Connect</h4>
+          <a href="https://github.com/nouranglal810-png" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://x.com/Nourang_lal_" target="_blank"><i class="fab fa-x-twitter"></i> X</a>
+          <a href="https://www.linkedin.com/in/nourang-lal-godara-888812329?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
